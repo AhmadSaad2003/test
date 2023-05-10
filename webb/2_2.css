@@ -1,0 +1,33 @@
+body { font-family : "Times New Roman" ; color : Maroon }
+div.entete {
+page-break-before : always ;
+font-weight : bold
+}
+div.corps {
+font-size : 10pt;
+font-weight : normal ;
+color : Maroon ;
+background-color : ivory ;
+width : 14cm ;
+position : relative ; left : 0 ;
+padding: 0.2cm 1cm 0.5cm 0.5cm ;
+border: 1px solid royalblue
+}
+img {
+position: absolute ;
+top: 0.5cm ;
+right: 0.5cm ;
+width : 114px ;
+height : 120px
+}
+.boursier { position : absolute ; left : 6cm }
+.redouble { position : absolute ; left : 6cm }
+.obtention { position : absolute ; left : 2.5cm }
+.adresse { position : absolute ; left : 2.5cm }
+.cp { position : absolute ; left : 2.5cm }
+.ville { position : absolute ; left : 4cm }
+.tel { position : absolute ; right : 1.5cm }
+
+
+
+@media screen { .entete {display: none} }

@@ -1,0 +1,29 @@
+<html>
+<head>
+	<meta charset='utf-8'>
+	
+</head>
+
+<body dir=rtl>
+	<script>
+	 	var today = new Date();
+	 	document.write (Debuts(today.getFullYear()));
+
+		function Debuts(a) {
+     			var ja = new Array("أحد","ائنين","ثلاثاء","أربعاء","خميس","جمعة","سبت");
+			var label = "العام";
+			st = "<h3 align=center>"+label+" "+a+"</h3>";
+			st = st + "<table border bgcolor=#f8f8f8 align=center><tr><th>الشهر</th><th>التاريخ</th><th>اليوم</th></tr>";
+			for (j=1;j<=12;j++) {	
+				var d = new Date(a,j-1,1);
+				//alert(d);
+				pj = d.getDay();
+				st = st + "<tr align=center><td>"+j+"</td><td>1/"+j+"/"+a+"</td><td>"+ja[pj]+"</td></tr>";
+      			}
+			st = st+"</table>"; 
+     			return st;
+  	 	}
+		
+	</script>
+</body>
+</html>

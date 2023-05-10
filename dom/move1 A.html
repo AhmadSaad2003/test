@@ -1,0 +1,32 @@
+<html>
+<head>
+	<script>
+		var delay;
+		var step = 20;
+		var dir = 0;
+
+		function moveImage(){
+			document.im.width = step;
+			document.im.height = step;
+			if(dir == 0) {
+				step += 5;
+				if(step>400) dir = 1;
+			}
+			else {
+				step -= 5;
+				if(step<20) dir = 0;	
+			}
+			
+		}
+	
+	</script>
+</head>
+
+<body>
+	<form name="f">
+		<input type="button" value="Start" onclick="delay = setInterval('moveImage();',100);">
+		<input type="button" value="Stop" onclick="clearInterval(delay);">
+	</form>
+	<img src="./snoopy.gif" name="im" width="150" height="200">
+</body>
+</html>

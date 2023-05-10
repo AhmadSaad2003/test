@@ -1,0 +1,26 @@
+<html>
+<head>
+<meta charset='utf-8'>
+
+</head>
+
+<body dir=rtl>
+	<script>
+  	var days = new Array("الاحد","الاثنين","الثلاثاء","الاربعاء","الخميس","الجمعة","السبت");
+	var dates = new Array ("1/1","6/1","9/2","14/2","25/3","1/5", "25/5", "22/11", "25/12" );
+	var holidays = new Array ( "رأس السنة", "راس السنة الارمنية", "مار مارون", "استشهاد الرئيس رفيق الحريري","عيد البشارة", "عيد العمال","عيد المقاومة و التحرير", "عيد الاستقلال", "عيد الميلاد" );
+	var d = new Date();
+	var y = d.getFullYear();
+	document.write("<table border align=center>");
+	document.write("<caption><b>"+" العطل الثابتة للعام "+y+"</caption>");
+	document.write("<tr><th>المناسبة </th><th>التاريخ</th><th>اليوم  </th></tr>");
+	for(var i = 0; i <holidays.length ; i++){
+		var da = dates[i].split("/");
+		d = new Date(y, da[1]-1, da[0]);
+		document.write("<tr><td>"+holidays[i]+ "</td><td>"+ d.toLocaleDateString() +"</td><td>"+days[d.getDay()]+"</td></tr>");
+	}
+	document.write("</table>");
+	</script>
+</body>
+
+</html>

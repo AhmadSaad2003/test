@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Examen</title>
+        <style>
+            .legend{
+                font-size: 14px;
+                font-family: Arial, Helvetica, sans-serif;
+                color: blue;
+            }
+            .first{
+                font-size: 10px;
+                font-family: Arial, Helvetica, sans-serif;
+                color: blueviolet;
+            }
+            .last{
+                font-family: Arial, Helvetica, sans-serif;
+                color: red;
+            }
+            input{
+                background-color: aquamarine;
+                border-radius: 4px;
+                border-color: blue;
+            }
+            input:hover{
+                background-color: bisque;
+            }
+            input:focus{
+                background-color: aliceblue;
+                color: black;
+            }
+            .button:hover{
+                border-radius: 2px;
+                width: 100px;
+                height: 80px;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <caption classe="legend">inscription</caption>
+            <form>
+            <tr><td class="first"><label >Nom</label></td><td><input id="nom" type="text" placeholder="Taper votre nom" required autofocus></td><td class="last">*</td></tr>
+            <tr><td class="first"><label >Prenom</label></td><td><input id="prenom" type="text" required></td><td class="last">*</td></tr>
+            <tr><td class="first"><label >Date de naissance</label></td><td><input  id="date" type="date" required></td><td class="last">*</td></tr>
+            <tr><td class="first"><label>Mot de passe</label></td><td><input id="motpasse1" type="password" required></td><td class="last">*</td></tr>
+            <tr><td class="first"><label>Confirmer mot de passe</label></td><td><input id="motpasse2" type="password" required><td class="last">*<div id="message"></div></td></tr>
+            <tr><td></td><td class="last"><input class="button" type="button" value="Valider"><input class="button" type="button" value="Annuler"></td></tr>
+            </form>
+        </table>
+        <script>
+            var interval=setInterval(identique(),200);
+            function identique(){
+                var x=document.getElementById("motpasse1").value;
+                var y=document.getElementById("motpasse2").value;
+                if(x.value==y.value){
+                    document.getElementById("message").innerHTML="<p>Valid<p>";
+                }else{
+                    document.getElementById("message").innerHTML="<p>Invalid<p>";
+                }
+            }
+        </script>
+    </body>
+</html>

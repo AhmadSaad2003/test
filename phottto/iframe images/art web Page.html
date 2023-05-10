@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<title>Modular House Exhibit</title>
+	<link rel="stylesheet" type="text/css" href="./house.css">
+	
+</head>
+<body>
+	<h1>Modular House Exhibit</h1>
+	<h3>
+		Click a thumbnail at the left in order to move it to the viewing frame at the right.
+	</h3>
+	<div class="table">
+		<nav class="cell">
+			<a href="./images/kitchen.jpg" target="full-size">
+				<img src="./images/kitchenThumb.jpg" alt="kitchen"></a>
+			<a href="./images/living.jpg" target="full-size">
+				<img src="./images/livingThumb.jpg" alt="living space"></a>
+			<a href="./images/stairway.jpg" target="full-size">
+				<img src="./images/stairwayThumb.jpg" alt="stairway"></a>
+		</nav>
+		<iframe class="cell" name="full-size" width="480" height="320" src="./images/kitchen.jpg"></iframe>
+	</div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+	body {
+		font-family: "Trebuchet MS",Verdana,Arial,Helvetica,sans-serif;
+		font-size: 12px;
+		color:#7D6D4C;
+	}
+	div#maincenter {
+		width:550px;
+		height:150px;
+		border:1px solid blue;
+		line-height:125%;
+		padding: 15 0 0 10;
+		background-color:ivory;
+	}
+	.citation {
+		border:1px solid #0E0C09;
+		width:75%;
+		padding:1em 1em 2em 1em;
+		font-weight:bold;
+		background-color:#fef1e9;
+	}
+	.ligneauteur {
+		width:75%;
+		padding:0.1em 1em 1em 1em;
+	}
+	.auteur {
+		text-align:left;
+		position:relative;
+		float:left;
+		top:-1.2em;
+		background-color:#f7ebe3;
+		padding:0.5px;
+	}
+	.reference {
+		text-align:right;
+		float:right;
+		position:relative;
+		top:-1.2em;
+		background-color:#f7ebe3;
+		padding:0.5px;
+		font-size:75%;
+	}
